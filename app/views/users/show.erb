@@ -1,0 +1,10 @@
+<h1><%=@user.name%></h1>
+<h2>Photos</h2>
+<a href="/users/<%=@user.id%>/photos/edit"><h3>Add New Photo</h3></a>
+<br>
+  <%@user.photos.each do |photo|%>
+  <div> <%=photo.title%> <br>
+    Tagged as:<br>
+  <img src="<%=photo.url %>" alt="<%=photo.title %>"></div>
+  <%end%>
+</ul>
